@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+           id="com.laneveraroja.lnrbot"
+      version="0.1.0">
+    <name>watchdog</name>
+    <description>Sample PhoneGap watchdog Plugin</description>
+    <license>laneveraroja.com</license>
+    <keywords>phonegap,watchdog</keywords>
+ 
+ 
+    <js-module src="www/watchdog.js" name="phonegapWatchgdog">
+        <clobbers target="window.phonegapWatchgdog" />
+    </js-module>
+ 
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="watchdog">
+                <param name="android-package" value="com.laneveraroja.lnrbot.watchdog"/>
+            </feature>
+        </config-file>
+ 
+        <source-file src="src/watchdog.java" target-dir="src/com/laneveraroja/lnrbot" />      
+     </platform>          
+</plugin>
