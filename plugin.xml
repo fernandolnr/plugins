@@ -10,7 +10,7 @@
  
  
     <js-module src="www/watchdog.js" name="phonegapWatchdog">
-        <merge target="window.phonegapWatchdog" />
+        <clobbers target="window.phonegapWatch" />
     </js-module>
  
     <!-- android -->

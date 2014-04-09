@@ -1,7 +1,7 @@
 var phonegapWatchdog = {
 
-    phonegapWatchdog: function(successCallback, errorCallback, timer) {
-        exec(succesCallback, errorCallback, "Watchdog", "phonegapWatchdog", [timer]);
+    phonegapWatchdog: function(timer) {
+        exec(null, null, "Watchdog", "phonegapWatchdog", [timer]);
     },
 };
 
