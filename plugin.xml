@@ -9,8 +9,8 @@
     <keywords>phonegap,watchdog</keywords>
  
  
-    <js-module src="www/watchdog.js" name="phonegapWatchgdog">
-        <clobbers target="window.phonegapWatchgdog" />
+    <js-module src="www/watchdog.js" name="phonegapWatchdog">
+        <merge target="window.phonegapWatchdog" />
     </js-module>
  
     <!-- android -->
@@ -21,6 +21,6 @@
             </feature>
         </config-file>
  
-        <source-file src="src/Watchdog.java" target-dir="src/com/laneveraroja/watchdog" />      
+        <source-file src="src/Watchdog.java" target-dir="src/org/laneveraroja/watchdog" />      
      </platform>          
 </plugin>

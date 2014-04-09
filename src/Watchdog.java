@@ -9,22 +9,15 @@ import org.json.JSONException;
 import android.util.Log;
 
 public class Watchdog extends CordovaPlugin {
-	public static final String ACTION_WACTHDOG = "phonegapWatchgdog";  
-	
-	 /**
-     * Constructor.
-     */
-    public watchdog() {
-    }
 
-    
+	    
 	@Override
 	public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
 		try {
-		    if (ACTION_WACTHDOG.equals(action)) {
+		    if (action.equals("phonegapWatchdog")) {
 		       String timer = args.getString(0);
 		       
-		       this.phonegapWatchgdog(timer);
+		       this.phonegapWatchdog(timer);
 		 
 		       callbackContext.success();
 		       return true;
@@ -44,7 +37,7 @@ public class Watchdog extends CordovaPlugin {
 
 	private String timer;
 	
-	public void phonegapWatchgdog(String timer)
+	public void phonegapWatchdog(String timer)
 	{
 		setTimerWatchdog(timer);
 		Log.d("WatchDog", "Hora=" + timer); 				

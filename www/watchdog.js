@@ -1,8 +1,8 @@
-var phonegapWatchgdog = {
+var phonegapWatchdog = {
 
-    phonegapWatchgdog: function(successCallback, errorCallback, timer) {
-        exec(succesCallback, errorCallback, "watchdog", "phonegapWatchgdog", [timer]);
+    phonegapWatchdog: function(successCallback, errorCallback, timer) {
+        exec(succesCallback, errorCallback, "Watchdog", "phonegapWatchdog", [timer]);
     },
 };
 
-module.exports = phonegapWatchgdog; 
+module.exports = phonegapWatchdog; 
