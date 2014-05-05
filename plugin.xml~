@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
  
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-           id="com.laneveraroja.lnrbot"
+           id="org.laneveraroja.watchdog"
       version="0.1.0">
     <name>watchdog</name>
     <description>Sample PhoneGap watchdog Plugin</description>
@@ -9,18 +9,18 @@
     <keywords>phonegap,watchdog</keywords>
  
  
-    <js-module src="www/watchdog.js" name="phonegapWatchgdog">
-        <clobbers target="window.phonegapWatchgdog" />
+    <js-module src="www/watchdog.js" name="phonegapWatchdog">
+        <merges target="window.phonegapWatchdog" />
     </js-module>
  
     <!-- android -->
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="watchdog">
-                <param name="android-package" value="com.laneveraroja.lnrbot.watchdog"/>
+            <feature name="Watchdog">
+                <param name="android-package" value="org.laneveraroja.watchdog.Watchdog"/>
             </feature>
         </config-file>
  
-        <source-file src="src/watchdog.java" target-dir="src/com/laneveraroja/lnrbot" />      
+        <source-file src="src/Watchdog.java" target-dir="src/org/laneveraroja/watchdog" />      
      </platform>          
 </plugin>
